@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 7.0.x - Development package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-05-21 09:39:19+0000\n"
+"PO-Revision-Date: 2026-05-23 09:29:00+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1330,7 +1330,7 @@ msgstr "Une erreur réseau s’est produite lors de l’envoi de la requête %1$
 #: wp-includes/admin-bar.php:954
 msgctxt "keyboard shortcut to open the command palette"
 msgid "Ctrl+K"
-msgstr "Ctrl+K"
+msgstr "Ctrl + K"
 
 #: wp-includes/admin-bar.php:953
 msgctxt "keyboard shortcut to open the command palette"
@@ -1579,7 +1579,7 @@ msgstr "Le champ user_pass est obligatoire lors de la création d’un nouveau c
 #. translators: %s is the class name
 #: wp-includes/template.php:1026 wp-includes/template.php:1065
 msgid "Uncaught \"%s\" thrown:"
-msgstr "Une erreur « %s » non détecté a été déclenchée :"
+msgstr "Une erreur « %s » non détectée a été déclenchée :"
 
 #: wp-includes/template.php:975
 msgid "User error triggered:"
@@ -2507,7 +2507,7 @@ msgstr "Mot de passe invalide."
 #. algorithms.
 #: wp-includes/pluggable.php:2723
 msgid "Unsupported hashing algorithm: %1$s. Supported algorithms are: %2$s"
-msgstr "Algorithme de hachage non pris en charge:  %1$s. Les algorithmes pris en charge sont : %2$s"
+msgstr "Algorithme de hachage non pris en charge : %1$s. Les algorithmes pris en charge sont : %2$s"
 
 #: wp-includes/html-api/class-wp-html-processor.php:5796
 msgid "Cannot set bookmarks on tokens that do no appear in the original HTML text."
@@ -2556,7 +2556,7 @@ msgstr "Une erreur s’est produite lors du traitement de votre commentaire. Veu
 #. translators: %s: context string
 #: wp-includes/class-wp-url-pattern-prefixer.php:72
 msgid "Invalid URL pattern context %s."
-msgstr "Contexte de composition d‘URL invalide : « %s »."
+msgstr "Contexte de composition d‘URL invalide : « %s »."
 
 #: wp-includes/class-wp-taxonomy.php:627 wp-includes/taxonomy.php:236
 #: wp-includes/js/dist/editor.js:47317 wp-includes/js/dist/editor.js:47322
@@ -15571,7 +15571,7 @@ msgstr "Passer en prévisualisation « PC de bureau »"
 #: wp-includes/class-wp-customize-manager.php:2146
 #: wp-includes/customize/class-wp-customize-selective-refresh.php:177
 msgid "Shift-click to edit this element."
-msgstr "Maj+clic pour modifier cet élément."
+msgstr "Maj + clic pour modifier cet élément."
 
 #: wp-comments-post.php:31
 msgid "Comment Submission Failure"
@@ -16549,19 +16549,19 @@ msgstr "Autoriser les liens de notification d’autres blogs (pings et rétrolie
 
 #: wp-includes/class-wp-editor.php:1415
 msgid "Ctrl + letter:"
-msgstr "Ctrl + lettre :"
+msgstr "Ctrl + lettre :"
 
 #: wp-includes/class-wp-editor.php:1414
 msgid "Cmd + letter:"
-msgstr "Cmd + lettre :"
+msgstr "Cmd + lettre :"
 
 #: wp-includes/class-wp-editor.php:1413
 msgid "Shift + Alt + letter:"
-msgstr "Shift + Alt + lettre :"
+msgstr "Shift + Alt + lettre :"
 
 #: wp-includes/class-wp-editor.php:1412
 msgid "Ctrl + Alt + letter:"
-msgstr "Ctrl + Alt + lettre :"
+msgstr "Ctrl + Alt + lettre :"
 
 #: wp-includes/class-wp-editor.php:1408
 msgid "Inline toolbar (when an image, link or preview is selected)"
@@ -17507,7 +17507,7 @@ msgstr "(WordPress n’a pas pu établir de connexion sécurisée vers WordPress
 
 #: wp-includes/class-wp-customize-widgets.php:1314
 msgid "Shift-click to edit this widget."
-msgstr "Faites Maj+clic pour modifier ce widget."
+msgstr "Faites Maj + clic pour modifier ce widget."
 
 #: wp-includes/class-wp-editor.php:1158
 msgctxt "HTML tag"
