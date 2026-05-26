@@ -1,0 +1,73 @@
+services:
+
+  mariadb:
+    image: mariadb:latest
+    container_name: mariadb_vray
+    hostname: mariadb_vray
+    networks:
+      sae23_vray:
+        ipv4_address: 192.168.203.10
+    ports:
+      - 3306:3306
+    environment:
+      MARIADB_USER: lubin
+      MARIADB_PASSWORD: lubin2007
+      MARIADB_DATABASE: database_lubin
+      MARIADB_ROOT_PASSWORD: root
+    volumes:
+      - ./badowordpress:/var/lib/mysql
+    restart: unless-stopped
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: phpmyadmin_vray
+    hostname: phpmyadmin_vray
+    networks:
+      sae23_vray:
+        ipv4_address: 192.168.203.11
+    ports:
+      - 9000:80
+    environment:
+      PMA_HOST: mariadb_vray
+    depends_on:
+      - mariadb
+    restart: unless-stopped
+
+  wordpress:
+    image: wordpress:latest
+    container_name: wordpress_vray
+    hostname: wordpress_vray
+    networks:
+      sae23_vray:
+        ipv4_address: 192.168.203.12
+    ports:
+      - 80:80
+    environment:
+      WORDPRESS_DB_HOST: mariadb_vray
+      WORDPRESS_DB_USER: lubin
+      WORDPRESS_DB_PASSWORD: lubin2007
+      WORDPRESS_DB_NAME: database_lubin
+    volumes:
+      - ./htmlwordpress:/var/www/html
+    depends_on:
+      - mariadb
+    restart: unless-stopped
+
+  portfolio:
+    build: ./portfolio
+    container_name: mon-portfolio
+    hostname: portfolio_vray
+    networks:
+      sae23_vray:
+        ipv4_address: 192.168.203.13
+    ports:
+      - 82:80
+    restart: unless-stopped
+
+networks:
+  sae23_vray:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.203.0/24
+          gateway: 192.168.203.1

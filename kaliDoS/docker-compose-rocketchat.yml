@@ -1,0 +1,27 @@
+version: "3"
+
+services:
+  site_web:
+    image: "portfolio"
+    container_name: serv_web
+    ports:
+      - 8080:80
+
+  mongo:
+    image: mongo:4.4
+    container_name: mongo_rocketchat
+    restart: unless-stopped
+    volumes:
+      - ./data/db:/data/db
+
+  rocketchat:
+    image: rocketchat/rocket.chat:latest
+    container_name: rocketchat
+    restart: unless-stopped
+    ports:
+      - 3000:3000
+    environment:
+      - MONGO_URL=mongodb://mongo:27017/rocketchat
+      - ROOT_URL=http://localhost:  
+    depends_on:
+      - mongo
